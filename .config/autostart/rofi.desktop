@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=rofi -show drun
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_IN]=rofi
+Name=rofi
+Comment[en_IN]=
+Comment=
