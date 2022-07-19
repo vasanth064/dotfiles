@@ -1,35 +1,14 @@
 <?xml version="1.0"?>
 <application-state>
   <context id="">
-    <application id="msedge-cnmnfnkedfekfidgojcdmndbcipagogc-Default.desktop" score="1.9557774066925049e-08" last-seen="1657000048"/>
-    <application id="org.gnome.Shell.Extensions.GSConnect.desktop" score="0" last-seen="1656773925"/>
-    <application id="io.bassi.Amberol.desktop" score="1.4435499906539917e-08" last-seen="1656846734"/>
-    <application id="kitty.desktop" score="101.00276893937072" last-seen="1657364911"/>
-    <application id="org.gnome.FileRoller.desktop" score="0" last-seen="1656967558"/>
-    <application id="org.gnome.Software.desktop" score="1.862645149230957e-09" last-seen="1656965347"/>
-    <application id="google-chrome.desktop" score="1.4901161193847656e-08" last-seen="1656938287"/>
-    <application id="virt-manager.desktop" score="799.243408203125" last-seen="1657366054"/>
-    <application id="software-properties-gtk.desktop" score="3.2596290111541748e-09" last-seen="1656965349"/>
-    <application id="msedge-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop" score="5.9604644775390625e-08" last-seen="1657039068"/>
-    <application id="org.gnome.Shell.Extensions.GSConnect.Preferences.desktop" score="9.3132257461547852e-10" last-seen="1656940201"/>
-    <application id="gnome-control-center.desktop" score="1.0002441713587658" last-seen="1657363831"/>
-    <application id="onlyoffice-desktopeditors_onlyoffice-desktopeditors.desktop" score="5.7220458984375e-06" last-seen="1657083144"/>
-    <application id="org.nomacs.ImageLounge.desktop" score="0.0013427734375" last-seen="1657218330"/>
-    <application id="update-manager.desktop" score="0" last-seen="1657080639"/>
-    <application id="io.github.shiftey.Desktop.desktop" score="42" last-seen="1657292469"/>
-    <application id="microsoft-edge.desktop" score="20783.123616046745" last-seen="1657366055"/>
-    <application id="com.obsproject.Studio.desktop" score="7.4505805969238281e-09" last-seen="1656967409"/>
-    <application id="org.telegram.desktop.desktop" score="0.095947369001818217" last-seen="1657271055"/>
-    <application id="org.gnome.Nautilus.desktop" score="72.328671109489861" last-seen="1657365368"/>
-    <application id="org.gnome.Terminal.desktop" score="19.006104203406863" last-seen="1657361316"/>
-    <application id="vlc.desktop" score="1.7705928862030498e-05" last-seen="1657265320"/>
-    <application id="firefox.desktop" score="0" last-seen="1656940666"/>
-    <application id="org.gnome.DiskUtility.desktop" score="0.0036621280014514923" last-seen="1657219755"/>
-    <application id="gnome-system-monitor.desktop" score="0" last-seen="1657265429"/>
-    <application id="io.github.realmazharhussain.GdmSettings.desktop" score="4.6566128730773926e-08" last-seen="1656761350"/>
-    <application id="org.gnome.gedit.desktop" score="65.001709124080207" last-seen="1657357081"/>
-    <application id="com.discordapp.Discord.desktop" score="7.4505805969238281e-09" last-seen="1657015469"/>
-    <application id="code.desktop" score="213.75708752368243" last-seen="1657365359"/>
-    <application id="yelp.desktop" score="0" last-seen="1657131406"/>
+    <application id="org.gnome.Nautilus.desktop" score="188.32867110948985" last-seen="1658210345"/>
+    <application id="vlc.desktop" score="7597.0000177059283" last-seen="1658171698"/>
+    <application id="microsoft-edge.desktop" score="24049.123616046745" last-seen="1658210341"/>
+    <application id="code.desktop" score="49" last-seen="1658137556"/>
+    <application id="org.gnome.gedit.desktop" score="19" last-seen="1658144197"/>
+    <application id="gnome-control-center.desktop" score="17.000244171358766" last-seen="1658209479"/>
+    <application id="com.obsproject.Studio.desktop" score="36" last-seen="1658171465"/>
+    <application id="org.gnome.Terminal.desktop" score="101" last-seen="1658210345"/>
+    <application id="update-manager.desktop" score="1" last-seen="1658135828"/>
   </context>
 </application-state>
