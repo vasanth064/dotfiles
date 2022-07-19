@@ -6,6 +6,7 @@ fi
 
 #Alias
 
+
 #System
 alias update='sudo apt update'
 alias upgrade='sudo apt upgrade'
@@ -42,7 +43,7 @@ alias of='nautilus .'
 
 gint () {
 
-# 1) Install gh from snap
+sudo pip install -U youtube-dl # 1) Install gh from snap
 # gh - github's CLI
 # 2) Run gh auth login with ssh and browser login
 # 3) Run gini PROJECT NAME
@@ -60,6 +61,14 @@ git push --set-upstream origin main
 code .
 exit
 
+}
+
+yt (){
+yt-dlp --config-location ~/.config/yt-dlp/config/ $1
+}
+
+ytmp (){
+yt-dlp --ignore-errors --format bestaudio --extract-audio --audio-format mp3 --audio-quality 160K --output "~/Music/%(playlist_title)s/%(title)s.%(ext)s" --yes-playlist $1
 }
 
 cs () {
