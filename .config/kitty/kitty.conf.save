@@ -70,5 +70,5 @@ kitty_mod ctrl
 background_opacity 0.8
 remember_window_size  yes
 
-initial_window_width  50c
-initial_window_height 10c
+initial_window_width 100
+initial_window_height 100
