@@ -2,10 +2,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Set up the prompt
-
-#Alias
-
+#----------------------------------------------------------------------------------------------ALIAS-----------------------------------------------------------------------------------------#
+#                                                                                                                                                                                            #
+#                                                                                                                                                                                            #
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
 #System
 alias update='sudo apt update'
@@ -38,64 +38,97 @@ alias ys='yarn start'
 alias ya='yarn add'
 alias yr='yarn remove'
 
-#Custom Functions
-alias of='nautilus .'
+#-------------------------------------------------------------------------------------------END OF ALIAS-------------------------------------------------------------------------------------#
+#                                                                                                                                                                                            #
+#                                                                                                                                                                                            #
+#--------------------------------------------------------------------------------------USER DEFINED FUNCTIONS--------------------------------------------------------------------------------#
 
-gint () {
+#Webm Convertor
+webm (){
+  if [ $# -ne 2 ]; then
+    echo "Example usage: webm input.mp4 1920"
+    return
+  fi
 
-sudo pip install -U youtube-dl # 1) Install gh from snap
-# gh - github's CLI
-# 2) Run gh auth login with ssh and browser login
-# 3) Run gini PROJECT NAME
-# Done ... :)
+  FILENAME=${1%%.*}
+  mkdir webm
 
-cd ~/Projects
-gh repo create $1 --public --clone
-cd $1
-touch .gitignore
-touch README.md
-git branch -M main
-git add .
-git commit -m 'Initial Commit'
-git push --set-upstream origin main
-code .
-exit
-
+  ffmpeg -i $1 -c:v libvpx-vp9 -crf 40 -vf scale=$2:-2 -an webm/${FILENAME}.webm
+  ffmpeg -i $1 -c:v libx264 -crf 24 -vf scale=$2:-2 -movflags faststart -an webm/${FILENAME}_h264.mp4
+  ffmpeg -i $1 -c:v libx265 -crf 28 -vf scale=$2:-2 -tag:v hvc1 -movflags faststart -an webm/${FILENAME}_h265.mp4
 }
 
+#Webp Convertor
+webp (){
+  if [ $# -ne 1 ]; then
+    echo "Example usage: webp filename.png"
+    return
+  fi
+
+  FILENAME=${1%%.*}
+  ffmpeg -i $1 -c libwebp webp_${FILENAME}.webp
+}
+
+#Youtube Downloader
 yt (){
-yt-dlp --config-location ~/.config/yt-dlp/config/ $1
+  if [ $# -ne 1 ]; then
+    echo "Example usage: yt 'YouTube URL' "
+    return
+  fi
+
+  yt-dlp --config-location ~/.config/yt-dlp/config/ $1
 }
 
-ytmp (){
-yt-dlp --ignore-errors --format bestaudio --extract-audio --audio-format mp3 --audio-quality 160K --output "~/Music/%(playlist_title)s/%(title)s.%(ext)s" --yes-playlist $1
+#Github Repository Initializer
+gint () {
+  cd ~/Projects
+  gh repo create $1 --public --clone
+  cd $1
+  touch .gitignore
+  touch README.md
+  git branch -M main
+  git add .
+  git commit -m 'Repository Initialization 😀'
+  git push --set-upstream origin main
+  code .
+  exit
 }
 
+#C# Compile and Runner
 cs () {
-mcs "$1".cs
-echo 'Compiled'
-./"$1".exe
+  mcs "$1".cs
+  echo 'Compiled'
+  ./"$1".exe
 }
 
+#React App Initializer
 cra () { 
   name=$1
   cd ~/Projects/ && npx create-react-app "$name" && cd "$name" && code . && exit
 }
 
+#ZSHRC Editor 
 zshrc () {
   nano ~/.zshrc
   source ~/.zshrc
   clear
 }
-vs ()
-{
+
+#VS Code Opener
+vs () {
   code .
   exit
 }
 
+#Projects Folder Opener
 dev () {
   cd ~/Projects
 }
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+#																							     #
+#																							     #
+#----------------------------------------------------------------------------------END OF USER DEFINED FUNCTIONS-----------------------------------------------------------------------------#
 
 #NVM
 export NVM_DIR="$HOME/.nvm"
